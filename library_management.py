@@ -260,12 +260,20 @@ def book12():
 
     if request.method=="GET":
 
+        status=request.args.get('status')
+        
+        if status:
+            query="""SELECT * from book_data where status=? """
+
+            cursor.execute(query,(status,))
+
+
         book_id=request.args.get('book_id')
         
         if book_id:
             query="""SELECT * from book_data where book_id=? """
 
-        cursor.execute(query,(book_id))
+            cursor.execute(query,(book_id,))
 
         books_list=[
                    {
