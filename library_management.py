@@ -81,10 +81,9 @@ def books_register():
         
         return jsonify(book_created)
 
-
 @app.route("/book_library/<int:id>",methods=["GET"])
 
-def book_issue(id):
+def book_get(id):
 
     conn=db_connection()
 
@@ -92,11 +91,48 @@ def book_issue(id):
 
     if request.method=="GET":
 
+        book_id="""SELECT book_id from book_data where book_id=?"""
+
+        cursor.execute(book_id,(id,))
+
+        id_status=cursor.fetchone()
+
+        if id_status:
+
+            query="""SELECT * from book_data where book_id=?"""
+
+            cursor.execute(query,(id,))
+
+            res=cursor.fetchone()
+
+            book_with_id={"book_name":res[0],
+                          "book_id":res[1],
+                          "author":res[2],
+                          "status":res[3],
+                          "category":res[4]}
+
+            return jsonify(book_with_id)
+
+        else:
+            return "book of provided id {} doen't exist "
+
+
+
+@app.route("/book_library/<int:id>",methods=["PUT"])
+
+def book_issue(id):
+
+    conn=db_connection()
+
+    cursor=conn.cursor()
+
+    if request.method=="PUT":
+
         query="""SELECT book_id from book_data where book_id=?"""
 
         cursor.execute(query,(id,))
 
-        id_status=cursor.fetchone()
+        id_status=cursor.fetchone() 
 
         if id_status is not None:
 
@@ -185,39 +221,6 @@ def book_delete(id):
     
 
 
-@app.route("/book_library/<int:id>",methods=["PUT"])
-
-def book_update(id):
-
-    conn=db_connection()
-
-    cursor=conn.cursor()
-    
-    if request.method=="PUT":
-        
-        book_name=request.form['book_name']
-        author=request.form['author']
-        status=request.form['status']
-        category=request.form['category']
-        
-
-        query="""UPDATE book_data SET
-                 book_name=?,
-                 author=?,
-                 status=?,
-                 category=?
-                 WHERE book_id=?"""
-
-        cursor.execute(query,(book_name,author,status,category,id))
-        
-        conn.commit()
-        
-    cursor.close()
-    conn.close()
-
-    return "book is updated with book id {}".format(id)
-
-
 @app.route("/book_library/<int:id>",methods=["PATCH"])
 
 def book_status_update(id):
@@ -247,7 +250,7 @@ def book_status_update(id):
 
 
 
-@app.route("/book_library",methods=["GET"])
+@app.route("/book_library1",methods=["GET"])
 
 def book12():
 
