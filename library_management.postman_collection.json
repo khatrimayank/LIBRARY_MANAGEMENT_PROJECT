@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "0d5d1585-0644-471a-af6e-fb94204e7eca",
+		"name": "library_management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27014605"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:5000/book_library",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "ww",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "sddsa",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/book_library",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"book_library"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/book_library",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "book_id",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "ww",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "book_name",
+							"value": "nbjkh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/book_library",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"book_library"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/book_library",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "book_id",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "ww",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "book_name",
+							"value": "nbjkh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/book_library/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"book_library",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/book_library",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "book_id",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "ww",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "book_name",
+							"value": "nbjkh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/book_library/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"book_library",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/book_library",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "book_id",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "ww",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "sddsa",
+							"type": "text"
+						},
+						{
+							"key": "book_name",
+							"value": "nbjkh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/book_library/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"book_library",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/book_library",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "book_id",
+							"value": "10",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "ww",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "issued",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "sddsa",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "book_name",
+							"value": "nbjkh",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/book_library/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"book_library",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:5000/book_library",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "book_id",
+							"value": "10",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "ww",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "issued",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "sddsa",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "book_name",
+							"value": "nbjkh",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/book_library1?status=available&book_id=8",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"book_library1"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						},
+						{
+							"key": "book_id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
