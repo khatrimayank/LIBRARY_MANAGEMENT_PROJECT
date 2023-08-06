@@ -162,10 +162,11 @@ def book_issue(id):
                     conn.commit()
 
                     print("book with id {} is issued".format(id))
-
-
-                return "book status of book id {} is updated and book is issued".format(id)
-
+                    
+                    return "book status of book id {} is updated and book is issued".format(id)
+                
+                else:
+                    return "you enter no so can't issue book"
 
             else:
                 return "book with given id {} is already issued".format(id)
